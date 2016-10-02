@@ -1,0 +1,30 @@
+# This is NOT for Puppet Enterprise, this is ONLY used for Vagrant
+# this file needs! to be kept in sync with the /etc/puppetlabs/puppet/hiera.yaml
+# file that is generated from the profile::pe::puppetserver class
+---
+:backends:
+  - yaml
+
+:logger: console
+
+:hierarchy:
+  - node/%{::clientcert}
+  - domain/%{::domain}/%{::server_role}
+  - role/%{::server_role}
+  - domain/%{::domain}
+  - common
+  - pki/certs
+  - pki/ca_certs
+  - monitoring/common
+  - monitoring/profile
+  - accounts/users
+  - accounts/groups
+  - accounts/bsd_passwords
+
+:yaml:
+  :datadir: /opt/r2_puppet_masterless/puppet/environments/masterless/hieradata/
+
+:merge_behavior: deeper
+
+:deep_merge_options:
+  :knockout_prefix: '--'

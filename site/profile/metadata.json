@@ -1,0 +1,11 @@
+{
+  "name": "arin-profile",
+  "version": "0.0.1",
+  "author": "Steven Bambling",
+  "license": "Apache-2.0",
+  "summary": "Roles/Profiles Profile Module",
+  "source": "https://stash.arin.net/scm/pup/arin-profile.git",
+  "project_page": "https://stash.arin.net/projects/PUP/repos/arin-profile/browse/README.md",
+  "issues_url": null,
+  "dependencies": [ ]
+}

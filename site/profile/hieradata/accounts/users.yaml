@@ -1,0 +1,19 @@
+---
+accounts::users:
+  root:
+    # WARNING: Do NOT set a value for password !!!
+    password:
+    comment: '%{profile::base::gecos_nodename} root'
+    tag: ['r2_users', 'root_user']
+  smbambling:
+    ensure: present
+    comment: 'Steven Bambling'
+    # WARNING: Do NOT set a value for password !!!
+    password:
+    uid: '1000'
+    gid: '1000'
+    groups:
+      - wheel
+    sshkeys:
+      - 'ssh-dss AAAAB3NzaC1kc3MAAACBANsqnXX9D6FzWn6SMN06GJnWhSOZapBtyuA8BvYL4CxZVJEdGXbqtfJcVaAlStNiRGAkGwL9v83h9VJE4z854Ybqr1LBUfk24fvWKRnTSJlqetGuqe9rCBYNcq2ZnUQh8JARpRLmmiV9BExv7dADSXDJVYiNcWMXUETjjWv1c7FnAAAAFQD+8iXWIj8naIxVlzbColoJWOAukwAAAIAZjNcJiu2BthfDAARxRk7N6Wb6NLKLyc7QIqLiTDipjHGLLN7qtunjNL35G9+Q30HLje74x8eI2NAwgGPcEiN5HVP2e7WdhIQ6gjBJhXmmkAntnDLn+spkmJAi14JYCNlINGJGF+CHFghNZUHES8Bi6Ge0KxMC1vpFgKRfyUMSwwAAAIB647d9+/mNUUU0P9k6NVwcw8O3Bqdc7yFlVJcJnPQuxY5OnVk5lPmv8nzus8l9eVE2CVbO4oD3E8Ad0ZjCG3Dqvg6xhW6Crj9r9+w7zTLGEI5s7sMZfQPOBBTljkPSsokoX5TIqS2zW0haQudS9yMfoG4YR2kZ674+Ln5lBT1cfw== smbambling@xi.arin.net'
+    tag: ['r2_users', 'smbambling_user']
