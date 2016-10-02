@@ -26,3 +26,7 @@ mod 'ca_cert',
 mod 'sudo',
   :git => 'https://github.com/saz/puppet-sudo.git',
   :ref => 'e5fe01b' # tag: v3.1.0
+
+mod 'accounts',
+  :git => 'https://github.com/puppetlabs/puppetlabs-accounts.git',
+  :ref => '681ae48' # tag: 1.0.0
