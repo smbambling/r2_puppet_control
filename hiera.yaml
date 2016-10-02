@@ -22,7 +22,7 @@
   - accounts/bsd_passwords
 
 :yaml:
-  :datadir: /opt/r2_puppet_masterless/puppet/environments/masterless/hieradata/
+  :datadir: /tmp/puppet/environments/masterless/hieradata/
 
 :merge_behavior: deeper
 

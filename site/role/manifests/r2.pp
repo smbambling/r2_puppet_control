@@ -6,7 +6,6 @@
 
 class role::r2 {
 
-  #contain profile::base
-  notify {"Testing Role":}
+  contain profile::base
 
 }
