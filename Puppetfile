@@ -31,6 +31,6 @@ mod 'accounts',
   :git => 'https://github.com/smbambling/puppetlabs-accounts.git',
   :ref => '4e1570c'
 
-mod 'plex',
+mod 'plexmediaserver',
   :git => 'https://github.com/smbambling/plex-media-server.git',
   :ref => '1fb8cb0'
