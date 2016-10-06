@@ -34,3 +34,7 @@ mod 'accounts',
 mod 'plexmediaserver',
   :git => 'https://github.com/smbambling/plex-media-server.git',
   :ref => '1fb8cb0'
+
+mod 'archive',
+  :git => 'https://github.com/voxpupuli/puppet-archive.git',
+  :ref => '7798ebb' # tag: v0.5.1
