@@ -28,5 +28,5 @@ mod 'sudo',
   :ref => 'e5fe01b' # tag: v3.1.0
 
 mod 'accounts',
-  :git => 'https://github.com/puppetlabs/puppetlabs-accounts.git',
-  :ref => '681ae48' # tag: 1.0.0
+  :git => 'https://github.com/smbambling/puppetlabs-accounts.git',
+  :ref => '4e1570c'
