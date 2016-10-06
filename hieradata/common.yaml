@@ -4,10 +4,6 @@ profile::base::monitoring: false
 profile::plex_media_server::monitoring: false
 profile::local_firewall::monitoring: false
 profile::apache::monitoring: false
-profile::letsencrypt::monitoring: false
-
-# Lets Encrypt
-profile::letsencrypt::email: 'smbambling@gmail.com'
 
 ## Global Group/User Management ##
 managed_groups:

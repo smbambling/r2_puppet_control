@@ -9,11 +9,9 @@ class role::r2 {
   contain profile::base
   contain profile::local_firewall
   contain profile::plex_media_server
-  contain profile::letsencrypt
 
   Class['profile::base'] ->
   Class['profile::local_firewall'] ->
-  Class['profile::plex_media_server'] ->
-  Class['profile::letsencrypt']
+  Class['profile::plex_media_server']
 
 }
