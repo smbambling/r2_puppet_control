@@ -65,4 +65,4 @@ mod 'logwatch',
 
 mod 'letsencrypt',
   :git => 'https://github.com/danzilio/puppet-letsencrypt.git',
-  :Ref => 'be55104' # tag: v1.0.0
+  :ref => 'be55104' # tag: v1.0.0
