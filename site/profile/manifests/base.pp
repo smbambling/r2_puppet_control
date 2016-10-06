@@ -15,6 +15,8 @@ class profile::base (
   Boolean $monitoring = hiera('base::monitoring', true),
 ){
 
+  contain yumrepo::epel
+
   # Set the root user GECOS field in /etc/passwd
   # This variable is called in hieradata/accounts.users.eyaml for root
   $gecos_nodename = $::fqdn
