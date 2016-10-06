@@ -62,3 +62,7 @@ mod 'logrotate',
 mod 'logwatch',
   :git => 'https://github.com/jonmosco/puppet-logwatch.git',
   :ref => 'a66f4f9' # tag: 0.1.1
+
+mod 'letsencrypt',
+  :git => 'https://github.com/danzilio/puppet-letsencrypt.git',
+  :Ref => 'be55104' # tag: v1.0.0
