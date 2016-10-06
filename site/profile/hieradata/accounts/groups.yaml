@@ -1,9 +1,0 @@
----
-# The groups hash can not be empty so a bunk account is listed
-# but never installed on any nodes
-accounts::groups:
-  placeholder:
-    ensure: absent
-  wheel:
-    ensure: present
-    gid: 10
