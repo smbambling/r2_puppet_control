@@ -11,7 +11,7 @@ class role::r2 {
   contain profile::plex_media_server
 
   Class['profile::base'] ->
-  Class['profile::local_firewal'] ->
+  Class['profile::local_firewall'] ->
   Class['profile::plex_media_server']
 
 }
