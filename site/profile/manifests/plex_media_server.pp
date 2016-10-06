@@ -15,10 +15,18 @@ class profile::plex_media_server (
 
 ){
 
-class { 'plexmediaserver':
-  plex_url => $url,
-  plex_pkg => $pkg,
-}
+  ## Profile Specific Monitoring ##
+  # Note: ${name} variable is used to get the name of the profile class
+  if $monitoring {
+    profile::sensu::profile::checks { $name:
+      profile_name => $name,
+    }
+  }
+
+  class { 'plexmediaserver':
+    plex_url => $url,
+    plex_pkg => $pkg,
+  }
 
 }
 
