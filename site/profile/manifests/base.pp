@@ -43,12 +43,9 @@ class profile::base (
   #create_resources(sslmgmt::ca_dh, $cacerts)
 
   # Manage the Mcollective and PXP-Agent Services
-  # Disable the service on non Puppet Enterprise Infrastructure
-  unless $::pe_server_version {
-    service { ['mcollective','pxp-agent']:
-      ensure => stopped,
-      enable => false,
-    }
+  service { ['mcollective','pxp-agent']:
+    ensure => stopped,
+    enable => false,
   }
 
   # Manage /etc/sudoers, /etc/sudoers.d and sudo.conf - parameters overridden in hiera
