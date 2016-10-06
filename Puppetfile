@@ -19,6 +19,10 @@ mod 'stdlib',
   :git => 'https://github.com/puppetlabs/puppetlabs-stdlib.git',
   :ref => '5727506' # tag: 4.8.0
 
+mod 'firewall',
+  :git => 'https://github.com/puppetlabs/puppetlabs-firewall.git',
+  :ref => '1a25c00' # tag: 1.8.1
+
 mod 'ca_cert',
   :git => 'https://github.com/pcfens/puppet-ca_cert.git',
   :ref => '2589535' # tag v1.2.0
