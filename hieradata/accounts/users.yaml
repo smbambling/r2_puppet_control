@@ -1,15 +1,13 @@
 ---
 accounts::users:
   root:
-    # WARNING: Do NOT set a value for password
-    password:
+    password: # WARNING: Do NOT set a value for password
     comment: '%{profile::base::gecos_nodename} root'
     tag: ['r2_users', 'root_user']
   smbambling:
     ensure: present
     comment: 'Steven Bambling'
-    # WARNING: Do NOT set a value for password
-    password:
+    password: # WARNING: Do NOT set a value for password
     uid: '1000'
     gid: '1000'
     groups:
