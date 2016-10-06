@@ -66,3 +66,11 @@ mod 'logwatch',
 mod 'letsencrypt',
   :git => 'https://github.com/danzilio/puppet-letsencrypt.git',
   :ref => 'be55104' # tag: v1.0.0
+
+mod 'vcsrepo',
+  :git => 'https://github.com/puppetlabs/puppetlabs-vcsrepo.git',
+  :ref => 'f98e8f0' # tag: 1.3.2
+
+mod 'inifile',
+  :git => 'https://github.com/puppetlabs/puppetlabs-inifile.git',
+  :ref => '3863d9a' # 1.4.3
