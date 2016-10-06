@@ -3,6 +3,7 @@
 profile::base::monitoring: false
 profile::plex_media_server::monitoring: false
 profile::local_firewall::monitoring: false
+profile::apache::monitoring: false
 
 ## Global Group/User Management ##
 managed_groups:
