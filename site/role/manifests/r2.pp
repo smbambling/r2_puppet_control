@@ -1,4 +1,4 @@
-# == Overview: R2 Management 
+# == Overview: R2 Management
 #
 # == Monitoring: No monitoring is currently provided
 #
@@ -7,9 +7,11 @@
 class role::r2 {
 
   contain profile::base
+  contain profile::local_firewall
   contain profile::plex_media_server
 
   Class['profile::base'] ->
+  Class['profile::local_firewal'] ->
   Class['profile::plex_media_server']
 
 }
