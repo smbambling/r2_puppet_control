@@ -1,4 +1,7 @@
 ---
+# Disable monitoring for now
+profile::base::monitoring: false
+
 ## Global Group/User Management ##
 managed_groups:
   groups:
