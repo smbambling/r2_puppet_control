@@ -38,3 +38,23 @@ mod 'plexmediaserver',
 mod 'archive',
   :git => 'https://github.com/voxpupuli/puppet-archive.git',
   :ref => '7798ebb' # tag: v0.5.1
+
+mod 'yumrepo',
+  :git => 'https://github.com/smbambling/bambling-yumrepo.git',
+  :ref => '8c28cbf'
+
+mod 'apache',
+  :git => 'https://github.com/puppetlabs/puppetlabs-apache.git',
+  :ref => 'd76699a' # tag: 1.8.1
+
+mod 'concat',
+  :git => 'https://github.com/puppetlabs/puppetlabs-concat.git',
+  :ref => '8d479b3' # tag: 2.1.0
+
+mod 'logrotate',
+  :git => 'https://github.com/yo61/puppet-logrotate.git',
+  :ref => '499b74b' # tag: v1.3.0
+
+mod 'logwatch',
+  :git => 'https://github.com/jonmosco/puppet-logwatch.git',
+  :ref => 'a66f4f9' # tag: 0.1.1
