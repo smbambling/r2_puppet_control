@@ -5,14 +5,6 @@ profile::plex_media_server::monitoring: false
 profile::local_firewall::monitoring: false
 profile::apache::monitoring: false
 
-## Global Group/User Management ##
-managed_groups:
-  groups:
-    - wheel
-managed_users:
-  users:
-    - r2_users
-
 # Sudo Configurations (/etc/sudoers.d/*) ##
 # Do not replace /etc/sudoers
 sudo::config_file_replace: false
