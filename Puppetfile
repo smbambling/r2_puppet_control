@@ -23,6 +23,10 @@ mod 'firewall',
   :git => 'https://github.com/puppetlabs/puppetlabs-firewall.git',
   :ref => '1a25c00' # tag: 1.8.1
 
+mod 'sslmgmt',
+  :git => 'https://github.com/tykeal/puppet-sslmgmt.git',
+  :ref => 'ad28efd' # tag: v1.0.1
+
 mod 'ca_cert',
   :git => 'https://github.com/pcfens/puppet-ca_cert.git',
   :ref => '2589535' # tag v1.2.0
