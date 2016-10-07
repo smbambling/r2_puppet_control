@@ -10,7 +10,8 @@
 # be set to true to create the needed conf.d site files
 
 class profile::apache (
-  #String $pki_keypair = 'wildcard.arin.net-server',
+  String $pki_keypair = 'wildcard.bambling.org-server',
+  String $pki_ca_cert = 'cacert_org_root.crt',
   Boolean $monitoring = hiera("${name}::monitoring", true),
 ) {
 
@@ -37,9 +38,9 @@ class profile::apache (
   class { '::apache':
     default_vhost     => hiera('apache::default_vhost', false),
     default_ssl_vhost => hiera('apache::default_ssl_vhost', false),
-    #default_ssl_cert  => hiera('apache::default_ssl_cert', "/etc/pki/tls/certs/${pki_keypair}.crt"),
-    #default_ssl_key   => hiera('apache::default_ssl_key', "/etc/pki/tls/private/${pki_keypair}.key"),
-    #default_ssl_ca    => hiera('apache::default_ssl_ca', '/etc/pki/tls/certs/arin_internal_ca.crt'),
+    default_ssl_cert  => hiera('apache::default_ssl_cert', "/etc/pki/tls/certs/${pki_keypair}.crt"),
+    default_ssl_key   => hiera('apache::default_ssl_key', "/etc/pki/tls/private/${pki_keypair}.key"),
+    default_ssl_ca    => hiera('apache::default_ssl_ca', "/etc/pki/tls/certs/${pki_ca_cert}"),
     trace_enable      => hiera('apache::trace_enable','Off'),
   }
 
