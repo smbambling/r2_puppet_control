@@ -8,7 +8,7 @@
 :logger: console
 
 :hierarchy:
-  - node/%{::clientcert}
+  - node/%{::fqdn}
   - domain/%{::domain}/%{::server_role}
   - role/%{::server_role}
   - domain/%{::domain}
