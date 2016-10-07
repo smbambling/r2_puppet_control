@@ -15,8 +15,8 @@ class profile::bambling_org (
     port            => '80',
     docroot         => '/var/www/html',
     servername      => 'bambling.org',
-    redirect_status => 'permanent',
-    redirect_dest   => 'https://bambling.org/',
+    #redirect_status => 'permanent',
+    #redirect_dest   => 'https://bambling.org/',
   }
 
   apache::vhost { 'bambling.org-ssl':
@@ -29,5 +29,3 @@ class profile::bambling_org (
   }
 
 }
-
-
