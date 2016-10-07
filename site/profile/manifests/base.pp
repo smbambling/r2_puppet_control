@@ -26,21 +26,16 @@ class profile::base (
     ensure => present,
   }
 
-  ## Manage Additional Certificate Authorities
-  #include ::ca_cert
-  #ca_cert::ca { 'example_internal_ca':
-  #  ensure  => 'trusted',
-  #  source  => 'text',
-  #  ca_text => hiera(sslmgmt::ca)[example_internal_ca],
-  #}
+  # Manage Additional Certificate Authorities
+  include ::ca_cert
 
-  ## Add SSL PKI Certificates to system
-  #$sslcerts = hiera_hash(certs_for_system)
-  #create_resources(sslmgmt::cert, $sslcerts)
+  # Add SSL PKI Certificates to system
+  $sslcerts = hiera_hash(certs_for_system)
+  create_resources(sslmgmt::cert, $sslcerts)
 
-  ## Add Certificate Authories to system
-  #$cacerts = hiera_hash(ca_certs_for_system)
-  #create_resources(sslmgmt::ca_dh, $cacerts)
+  # Add Certificate Authories to system
+  $cacerts = hiera_hash(ca_certs_for_system)
+  create_resources(sslmgmt::ca_dh, $cacerts)
 
   # Manage the Mcollective and PXP-Agent Services
   service { ['mcollective','pxp-agent']:
