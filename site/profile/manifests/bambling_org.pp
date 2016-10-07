@@ -7,8 +7,8 @@
 # == Notes:
 class profile::bambling_org (
   Boolean $monitoring = hiera('base::monitoring', true),
-  String $ssl_cert    = '/etc/ssl/certs/bambling.org-server.crt',
-  String $ssl_key     = '/etc/pki/tls/private/bambling.org-server.key',
+  String $ssl_cert    = '/etc/pki/tls/certs/wildcard.bambling.org-server.crt',
+  String $ssl_key     = '/etc/pki/tls/private/wildcard.bambling.org-server.key',
 ){
 
   apache::vhost { 'bambling.org-non-ssl' :
