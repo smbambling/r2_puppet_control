@@ -1,0 +1,22 @@
+---
+# Group/User Management #
+managed_groups:
+  groups:
+    - wheel
+managed_users:
+  users:
+    - r2_users
+
+certs_for_system:
+  wildcard.bambling.org-server:
+    pkistore: 'custom'
+    customstore: {
+      certfilename: '/etc/pki/tls/certs/wildcard.bambling.org-server.crt',
+      keyfilename: '/etc/pki/tls/private/wildcard.bambling.org-server.key'
+    }
+ca_certs_for_system:
+  cacert_org_root:
+    pkistore: 'custom'
+    customstore: {
+      certfilename: '/etc/pki/tls/certs/cacert_org_root.crt'
+    }
