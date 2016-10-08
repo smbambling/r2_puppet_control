@@ -29,7 +29,6 @@ class profile::base (
   # Set sexlinux to permissive
   class { selinux:
     mode => 'permissive',
-    type => 'permissive',
   }
 
   # Manage Additional Certificate Authorities
