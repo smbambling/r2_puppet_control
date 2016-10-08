@@ -73,4 +73,9 @@ mod 'vcsrepo',
 
 mod 'inifile',
   :git => 'https://github.com/puppetlabs/puppetlabs-inifile.git',
-  :ref => '3863d9a' # 1.4.3
+  :ref => '3863d9a' # tag: 1.4.3
+
+mod 'selinux',
+  :git => 'https://github.com/voxpupuli/puppet-selinux.git',
+  :ref => 'v0.5.0' # tag: v0.5.0
+
