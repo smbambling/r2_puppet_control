@@ -14,6 +14,12 @@ certs_for_system:
       certfilename: '/etc/pki/tls/certs/wildcard.bambling.org-server.crt',
       keyfilename: '/etc/pki/tls/private/wildcard.bambling.org-server.key'
     }
+  wildcard.techtaco.org-server:
+    pkistore: 'custom'
+    customstore: {
+      certfilename: '/etc/pki/tls/certs/wildcard.techtaco.org-server.crt',
+      keyfilename: '/etc/pki/tls/private/wildcard.techtaco.org-server.key'
+      }
 ca_certs_for_system:
   cacert_org_root:
     pkistore: 'custom'
