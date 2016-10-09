@@ -12,12 +12,14 @@ class role::r2 {
   contain profile::apache
   contain profile::bambling_org::main
   contain profile::techtaco_org::main
+  contain profile::techtaco_org::kb
 
   Class['profile::base'] ->
   Class['profile::local_firewall'] ->
   Class['profile::apache'] ->
   Class['profile::bambling_org::main'] ->
   Class['profile::techtaco_org::main'] ->
+  Class['profile::techtaco_org::kb'] ->
   Class['profile::plex_media_server']
 
 }
