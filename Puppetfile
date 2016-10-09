@@ -79,3 +79,6 @@ mod 'selinux',
   :git => 'https://github.com/voxpupuli/puppet-selinux.git',
   :ref => 'v0.5.0' # tag: v0.5.0
 
+mod 'dirtree',
+  :git => 'https://github.com/puppetlabs/pltraining-dirtree.git',
+  :ref => 'b738612' # forge release: v0.2.2
