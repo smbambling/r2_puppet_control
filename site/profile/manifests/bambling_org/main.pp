@@ -9,7 +9,7 @@ class profile::bambling_org::main (
   Boolean $monitoring = hiera('base::monitoring', true),
   String $ssl_cert    = '/etc/pki/tls/certs/wildcard.bambling.org-server.crt',
   String $ssl_key     = '/etc/pki/tls/private/wildcard.bambling.org-server.key',
-  String $docroot     = '/vol0/www/bambling_org/mdwiki',
+  String $docroot     = '/vol0/www/bambling_org/main',
   String $site_name   = 'bambling.org',
 ){
 

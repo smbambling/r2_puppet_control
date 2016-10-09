@@ -9,7 +9,7 @@ class profile::techtaco_org::main (
   Boolean $monitoring = hiera('base::monitoring', true),
   String $ssl_cert    = '/etc/pki/tls/certs/wildcard.techtaco.org-server.crt',
   String $ssl_key     = '/etc/pki/tls/private/wildcard.techtaco.org-server.key',
-  String $docroot     = '/vol0/www/techtaco_org/mdwiki',
+  String $docroot     = '/vol0/www/techtaco_org/octopress/public',
   String $site_name   = 'techtaco.org',
 ){
 
