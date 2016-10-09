@@ -9,21 +9,22 @@ class profile::techtaco_org::main (
   Boolean $monitoring = hiera('base::monitoring', true),
   String $ssl_cert    = '/etc/pki/tls/certs/wildcard.techtaco.org-server.crt',
   String $ssl_key     = '/etc/pki/tls/private/wildcard.techtaco.org-server.key',
-  String $docroot     = '/vol0/www/techtaco_org/octopress/public',
+  String $docroot     = '/vol0/www/techtaco_org/mdwiki',
+  String $site_name   = 'techtaco.org',
 ){
 
   # Need to make this create /vol0/www/techtaco_org
 
-  apache::vhost { 'techtaco.org-non-ssl' :
+  apache::vhost { "${site_name}-non-ssl" :
     port            => '80',
     docroot         => $docroot,
-    servername      => 'techtaco.org',
+    servername      => $site_name,
     #redirect_status => 'permanent',
     #redirect_dest   => 'https://techtaco.org/',
   }
 
-  apache::vhost { 'techtaco.org-ssl':
-    servername => 'techtaco.org',
+  apache::vhost { "${site_name}-ssl":
+    servername => $site_name,
     port       => '443',
     docroot    => $docroot,
     ssl        => true,
