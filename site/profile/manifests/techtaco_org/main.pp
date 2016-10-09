@@ -5,7 +5,7 @@
 # == Monitoring: No monitoring is currently provided
 #
 # == Notes:
-class profile::techtaco_org (
+class profile::techtaco_org::main (
   Boolean $monitoring = hiera('base::monitoring', true),
   String $ssl_cert    = '/etc/pki/tls/certs/wildcard.techtaco.org-server.crt',
   String $ssl_key     = '/etc/pki/tls/private/wildcard.techtaco.org-server.key',
