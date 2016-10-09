@@ -15,12 +15,19 @@ class profile::bambling_org::main (
 
   # Need to make this create /vol0/www/bambling_org
 
+  dirtree { $docroot:
+    ensure  => present,
+    path    => $docroot,
+    parents => true,
+  }
+
   apache::vhost { "${site_name}-non-ssl" :
     port            => '80',
     docroot         => $docroot,
     servername      => $site_name,
-    #redirect_status => 'permanent',
-    #redirect_dest   => 'https://bambling.org/',
+    require         => Dirtree["$docroot"],
+		#redirect_status => 'permanent',
+		#redirect_dest   => 'https://bambling.org/',
   }
 
   apache::vhost { "${site_name}-ssl":
@@ -30,6 +37,7 @@ class profile::bambling_org::main (
     ssl        => true,
     ssl_cert   => $ssl_cert,
     ssl_key    => $ssl_key,
+    require    => Dirtree["$docroot"],
   }
 
 }
