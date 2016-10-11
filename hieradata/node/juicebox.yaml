@@ -1,0 +1,15 @@
+---
+# Group/User Management #
+managed_groups:
+  groups:
+    - wheel
+managed_users:
+  users:
+    - juicebox
+
+ca_certs_for_system:
+  cacert_org_root:
+    pkistore: 'custom'
+    customstore: {
+      certfilename: '/etc/pki/tls/certs/cacert_org_root.crt'
+    }
