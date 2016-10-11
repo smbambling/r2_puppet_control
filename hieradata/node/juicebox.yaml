@@ -7,7 +7,7 @@ managed_users:
   users:
     - juicebox_users
 
-accounts::user:
+accounts::users:
   octavis:
     uid: '1000'
     gid: '1000'
