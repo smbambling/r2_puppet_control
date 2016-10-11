@@ -5,7 +5,7 @@ managed_groups:
     - wheel
 managed_users:
   users:
-    - juicebox
+    - juicebox_users
 
 ca_certs_for_system:
   cacert_org_root:
