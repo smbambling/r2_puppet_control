@@ -23,6 +23,7 @@ accounts::users:
     password: # WARNING: Do NOT set a value for password
     uid: '1001'
     gid: '1001'
+    shell: '/bin/zsh'
     groups:
       - wheel
     sshkeys:
