@@ -16,7 +16,7 @@ accounts::users:
     gid: '1010'
 
 certs_for_system:
-  wildcard.bambling.org-server:
+  wildcard.octavisjones.com-server:
     pkistore: 'custom'
     customstore: {
       certfilename: '/etc/pki/tls/certs/wildcard.octavisjones.com-server.crt',
