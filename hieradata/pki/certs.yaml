@@ -1,5 +1,95 @@
 ---
 sslmgmt::certs:
+  wildcard.octavisjones.com-server:
+    cert: |
+            -----BEGIN CERTIFICATE-----
+            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
+            othZ5z2BmO3BCrHmf9ZYSUt8ccYSVqIkJw==
+            -----END CERTIFICATE-----
+    key: |
+            -----BEGIN PRIVATE KEY-----
+            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
+            7y23fzW3KLFgcQoCm4+yMqz7mZ4kS9Jq
+            -----END PRIVATE KEY-----
   wildcard.techtaco.org-server:
     cert: |
             -----BEGIN CERTIFICATE-----

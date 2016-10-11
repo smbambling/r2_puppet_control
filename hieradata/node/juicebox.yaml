@@ -7,9 +7,27 @@ managed_users:
   users:
     - juicebox_users
 
+accounts::user:
+  octavis:
+    uid: '1000'
+    gid: '1000'
+  smbambling:
+    uid: '1010'
+    gid: '1010'
+
+certs_for_system:
+  wildcard.bambling.org-server:
+    pkistore: 'custom'
+    customstore: {
+      certfilename: '/etc/pki/tls/certs/wildcard.octavisjones.com-server.crt',
+      keyfilename: '/etc/pki/tls/private/wildcard.octavisjones.com-server.key'
+    }
 ca_certs_for_system:
   cacert_org_root:
     pkistore: 'custom'
     customstore: {
       certfilename: '/etc/pki/tls/certs/cacert_org_root.crt'
     }
+
+profile::apache::pki_keypair: 'wildcard.octavisjones.com-server'
+
