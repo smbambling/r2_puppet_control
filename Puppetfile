@@ -82,3 +82,7 @@ mod 'selinux',
 mod 'dirtree',
   :git => 'https://github.com/puppetlabs/pltraining-dirtree.git',
   :ref => 'b738612' # forge release: v0.2.2
+
+mod 'ohmyzsh',
+   :git => 'https://github.com/bitswarmlabs/puppet-ohmyzsh.git',
+   :ref => '6644f0e' # tag: 2.0.2
