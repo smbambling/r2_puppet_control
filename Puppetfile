@@ -94,3 +94,7 @@ mod 'graphite',
 mod 'memcached',
   :git => 'https://github.com/saz/puppet-memcached',
   :ref => 'bfa64e0' # branch: master
+
+mod 'grafana',
+  :git => 'https://github.com/bfraser/puppet-grafana.git',
+  :ref => '6d426d5' # tag: v2.5.0
