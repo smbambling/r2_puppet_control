@@ -31,4 +31,7 @@ ca_certs_for_system:
 profile::grafana::monitoring: false
 profile::grafana::site_name: 'grafana.techtaco.org'
 profile::grafana::ssl_cert: '/etc/pki/tls/certs/wildcard.techtaco.org-server.crt'
-profile::grafana::ssh_key: '/etc/pki/tls/private/wildcard.techtaco.org-server.key'
+profile::grafana::ssl_key: '/etc/pki/tls/private/wildcard.techtaco.org-server.key'
+profile::grafana::version: '3.1.1'
+profile::grafana::rpm_iteration: '1470047149'
+# }}}
