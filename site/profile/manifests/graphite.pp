@@ -32,6 +32,11 @@ class profile::graphite (
     mode   => '0755',
   }
 
+  file { '/usr/bin/pip-python':
+    ensure => 'link',
+    target => '/usr/bin/pip',
+  }
+
   class { '::graphite':
     # We need to set gr_web_server to 'none'
     # because we want to use our _own_ apache manifests
@@ -80,7 +85,7 @@ class profile::graphite (
       '127.0.0.1:3072:b',
       '127.0.0.1:3172:c',
     ],
-    require                     => File['/opt/graphite'],
+    require                     => [ File['/opt/graphite'], File['/usr/bin/pip-python'], ],
   }
 
   class { '::memcached': }
