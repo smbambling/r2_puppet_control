@@ -9,10 +9,9 @@
 
 class profile::grafana (
   Boolean $monitoring   = hiera("${name}::monitoring", true),
-  String $ssl_cert      = hiera("${name}::ssl_cert", "/etc/ssl/certs/${::fqdn}-server.crt"),
-  String $ssl_key       = hiera("${name}::ssl_key", "/etc/pki/tls/private/${::fqdn}-server.key"),
-  String $ldap_server   = hiera("${name}::ldap_server", 'corp.arin.net'),
-  String $ldap_password = hiera("${name}::ldap_password", ''),
+  String $site_name     = hiera("${name}::site_name"),
+  String $ssl_cert      = hiera("${name}::ssl_cert"),
+  String $ssl_key       = hiera("${name}::ssl_key"),
   String $version       = hiera("${name}::version"),
   String $rpm_iteration = hiera("${name}::rpm_iteration"),
 ) {
@@ -32,72 +31,29 @@ class profile::grafana (
     install_method      => 'repo',
     manage_package_repo => true,
     cfg                 => {
-      app_mode    => 'production',
-      server      => {
+      app_mode => 'production',
+      server   => {
         http_port => 8080,
       },
-      database    => {
+      database => {
         'type' => 'sqlite3',
       },
-      users       => {
-        allow_sign_up => false,
-      },
-      'auth.ldap' => {
-        enabled     => true,
-        config_file => '/etc/grafana/ldap.toml',
+      users    => {
+        allow_sign_up => true,
       },
     },
   }
 
-
-  # We have to use a heredoc here because
-  # the way the grafana module does this
-  # is by using the toml gem,
-  # and there is no way to set group_mappings
-  # properly, due to the fact that since a has is
-  # unordered, it flips around like a fish out of water.
-
-  $ldap_config = @("LDAPCONFIG"/L)
-    [[servers]]
-    bind_dn = "CORP\\\srv.graphite"
-    bind_password = "$ldap_password"
-    host = "$ldap_server"
-    port = 636
-    search_base_dns = ["OU=Internal,OU=Users,OU=CHA,DC=corp,DC=arin,DC=net"]
-    search_filter = "(sAMAccountName=%s)"
-    use_ssl = true
-
-    [servers.attributes]
-    email = "email"
-    member_of = "memberOf"
-    name = "givenName"
-    surname = "sn"
-    username = "sAMAccountName"
-
-    [[servers.group_mappings]]
-    group_dn = "CN=OPS,OU=Support,OU=Groups,OU=CHA,DC=corp,DC=arin,DC=net"
-    org_role = "Admin"
-    | LDAPCONFIG
-
-  file { '/etc/grafana/ldap.toml':
-    ensure  => 'file',
-    content => $ldap_config,
-    owner   => 'root',
-    group   => 'grafana',
-    mode    => '0640',
-    notify  => Service['grafana-server'],
-  }
-
-  apache::vhost { "${::fqdn}-non-ssl" :
+  apache::vhost { "${site_name}-non-ssl" :
     port            => '80',
     docroot         => '/var/www/html',
-    servername      => $::fqdn,
+    servername      => $site_name,
     redirect_status => 'permanent',
-    redirect_dest   => "https://${::fqdn}/",
+    redirect_dest   => "https://${site_name}/",
   }
 
-  apache::vhost { "${::fqdn}-ssl" :
-    servername => $::fqdn,
+  apache::vhost { "${site_name}-ssl" :
+    servername => $site_name,
     port       => '443',
     docroot    => '/var/www/html',
     ssl        => true,
