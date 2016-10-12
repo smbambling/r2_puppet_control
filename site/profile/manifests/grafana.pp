@@ -41,7 +41,7 @@ class profile::grafana (
         'type' => 'sqlite3',
       },
       users    => {
-        allow_sign_up => true,
+        allow_sign_up => false,
       },
       security => {
         admin_user     => $admin_user,
