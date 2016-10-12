@@ -12,6 +12,8 @@ class profile::grafana (
   String $site_name     = hiera("${name}::site_name"),
   String $ssl_cert      = hiera("${name}::ssl_cert"),
   String $ssl_key       = hiera("${name}::ssl_key"),
+  String $admin_user    = hiera("${name}::admin_user", 'admin'),
+  String $admin_pass    = hiera("${name}::admin_pass", 'admin'),
   String $version       = hiera("${name}::version"),
   String $rpm_iteration = hiera("${name}::rpm_iteration"),
 ) {
@@ -40,6 +42,10 @@ class profile::grafana (
       },
       users    => {
         allow_sign_up => true,
+      },
+      security => {
+        admin_user     => $admin_user,
+        admin_password => $admin_pass,
       },
     },
   }
