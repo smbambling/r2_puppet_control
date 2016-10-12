@@ -4,6 +4,7 @@ profile::base::monitoring: false
 profile::plex_media_server::monitoring: false
 profile::local_firewall::monitoring: false
 profile::apache::monitoring: false
+profile::graphite::monitoring: false
 
 # Sudo Configurations (/etc/sudoers.d/*) ##
 # Do not replace /etc/sudoers

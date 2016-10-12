@@ -13,6 +13,7 @@ class role::r2 {
   contain profile::bambling_org::main
   contain profile::techtaco_org::main
   contain profile::techtaco_org::kb
+  contain profile::graphite
 
   Class['profile::base'] ->
   Class['profile::local_firewall'] ->
@@ -20,6 +21,7 @@ class role::r2 {
   Class['profile::bambling_org::main'] ->
   Class['profile::techtaco_org::main'] ->
   Class['profile::techtaco_org::kb'] ->
+  Class['profile::graphite'] ->
   Class['profile::plex_media_server']
 
 }
