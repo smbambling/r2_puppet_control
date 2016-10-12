@@ -16,7 +16,7 @@ class role::juicebox {
   Class['profile::base'] ->
   Class['profile::local_firewall'] ->
   Class['profile::apache'] ->
-  Class['profile::grpahite'} ->
+  Class['profile::grpahite'] ->
   Class['profile::octavisjones_com::main'] ->  
   Class['profile::plex_media_server']
 
