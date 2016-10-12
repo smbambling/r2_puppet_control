@@ -31,7 +31,7 @@ class profile::graphite (
     group  => 'root',
     mode   => '0755',
   }
-  
+
   class { '::graphite':
     # We need to set gr_web_server to 'none'
     # because we want to use our _own_ apache manifests
