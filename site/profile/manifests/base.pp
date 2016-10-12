@@ -25,6 +25,8 @@ class profile::base (
   package { 'zsh':
     ensure => present,
   }
+  # Install OhMyZSH per user if specified
+  contain ::profile::ohmyzsh
 
   # Set sexlinux to permissive
   class { selinux:
