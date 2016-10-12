@@ -86,3 +86,7 @@ mod 'dirtree',
 mod 'ohmyzsh',
    :git => 'https://github.com/bitswarmlabs/puppet-ohmyzsh.git',
    :ref => '6644f0e' # tag: 2.0.2
+
+mod 'graphite',
+  :git => 'https://github.com/echocat/puppet-graphite.git',
+  :ref => '4ae73cc' # tag: v6.0.4 
