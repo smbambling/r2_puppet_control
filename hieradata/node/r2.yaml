@@ -26,3 +26,18 @@ ca_certs_for_system:
     customstore: {
       certfilename: '/etc/pki/tls/certs/cacert_org_root.crt'
     }
+
+# {{{ profile::graphite
+profile::graphite::virtualhost: 'graphite.techtaco.org'
+# }}}
+
+# {{{ profile::grafana
+profile::grafana::monitoring: false
+profile::grafana::virtualhost: 'grafana.techtaco.org'
+profile::grafana::ssl_cert: '/etc/pki/tls/certs/wildcard.techtaco.org-server.crt'
+profile::grafana::ssl_key: '/etc/pki/tls/private/wildcard.techtaco.org-server.key'
+profile::grafana::version: '3.1.1'
+profile::grafana::rpm_iteration: '1470047149'
+profile::grafana::admin_user: 'smbambling'
+profile::grafana::admin_pass: 'qwerty1234'
+# }}}
