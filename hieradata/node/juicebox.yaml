@@ -31,3 +31,18 @@ ca_certs_for_system:
 
 profile::apache::pki_keypair: 'wildcard.octavisjones.com-server'
 
+
+# {{{ profile::graphite
+# profile::graphite::virtualhost: 'graphite.techtaco.org'
+# }}}
+
+# {{{ profile::grafana
+profile::grafana::monitoring: false
+# profile::grafana::virtualhost: 'grafana.techtaco.org'
+profile::grafana::ssl_cert: '/etc/pki/tls/certs/wildcard.octavisjones.com-server.crt'
+profile::grafana::ssl_key: '/etc/pki/tls/private/wildcard.octavisjones.com-server.key'
+profile::grafana::version: '3.1.1'
+profile::grafana::rpm_iteration: '1470047149'
+profile::grafana::admin_user: 'octavis'
+profile::grafana::admin_pass: 'qwerty1234'
+# }}}
