@@ -8,6 +8,7 @@ class role::r2 {
 
   contain profile::base
   contain profile::local_firewall
+  contain profile::collectd
   contain profile::plex_media_server
   contain profile::apache
   contain profile::bambling_org::main
@@ -18,6 +19,7 @@ class role::r2 {
 
   Class['profile::base'] ->
   Class['profile::local_firewall'] ->
+  Class['profile::collectd'] ->
   Class['profile::apache'] ->
   Class['profile::bambling_org::main'] ->
   Class['profile::techtaco_org::main'] ->
