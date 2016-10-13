@@ -8,6 +8,7 @@ class role::juicebox {
 
   contain profile::base
   contain profile::local_firewall
+  contain profile::collectd
   contain profile::plex_media_server
   contain profile::apache
   contain profile::graphite
@@ -16,6 +17,7 @@ class role::juicebox {
 
   Class['profile::base'] ->
   Class['profile::local_firewall'] ->
+  Class['profile::collectd'] ->
   Class['profile::apache'] ->
   Class['profile::graphite'] ->
   Class['profile::grafana'] ->
