@@ -9,7 +9,7 @@
 
 class profile::grafana (
   Boolean $monitoring   = hiera("${name}::monitoring", true),
-  String $virtualhost     = hiera("${name}::virtualhost"),
+  String $virtualhost   = hiera("${name}::virtualhost"),
   String $ssl_cert      = hiera("${name}::ssl_cert"),
   String $ssl_key       = hiera("${name}::ssl_key"),
   String $admin_user    = hiera("${name}::admin_user", 'admin'),
@@ -78,4 +78,21 @@ class profile::grafana (
       },
     ],
   }
+
+  $grafana_datasource_local_graphite = hiera("profile::graphite::virtualhost")
+
+  host { $grafana_datasource_local_graphite:
+    ip => '127.0.0.1',
+  }
+
+  grafana_datasource { 'localhost_graphite':
+    grafana_url       => 'http://127.0.0.1:8080',
+    grafana_user      => $admin_user,
+    grafana_password  => $admin_pass,
+    type              => 'graphite',
+    url               => "http://${grafana_datasource_local_graphite}",
+    access_mode       => 'proxy',
+    is_default        => true,
+  }
+
 }
