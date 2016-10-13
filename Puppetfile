@@ -98,3 +98,7 @@ mod 'memcached',
 mod 'grafana',
   :git => 'https://github.com/bfraser/puppet-grafana.git',
   :ref => '6d426d5' # tag: v2.5.0
+
+mod 'collectd',
+  :git => 'https://github.com/voxpupuli/puppet-collectd.git',
+  :ref => 'f5a44db' # tag: v5.1.0
