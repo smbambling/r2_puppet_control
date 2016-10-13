@@ -9,6 +9,7 @@
 # == Notes:
 class profile::graphite (
   Boolean $monitoring = hiera("${name}::monitoring", true),
+  String $virtualhost = hiera("${name}::virtualhost"),
 ) {
 
 ## Profile Specific Monitoring ##
@@ -35,6 +36,35 @@ class profile::graphite (
   file { '/usr/bin/pip-python':
     ensure => 'link',
     target => '/usr/bin/pip',
+  }
+
+  apache::vhost { "$virtualhosti-non-ssl":
+    priority                    => 40,
+    servername                  => $virtualhost,
+    port                        => '80',
+    docroot                     => '/opt/graphite/webapp',
+    wsgi_application_group      => '%{GLOBAL}',
+    wsgi_daemon_process         => 'graphite',
+    wsgi_daemon_process_options => {
+      processes          => '5',
+      threads            => '5',
+      display-name       => '%{GROUP}',
+      inactivity-timeout => '120',
+    },
+    wsgi_import_script          => '/opt/graphite/conf/graphite_wsgi.py',
+    wsgi_import_script_options  => {
+      process-group     => 'graphite',
+      application-group => '%{GLOBAL}',
+    },
+    wsgi_process_group          => 'graphite',
+    wsgi_script_aliases         => {
+      '/' => '/opt/graphite/conf/graphite_wsgi.py',
+    },
+    headers                     => [
+      'set Access-Control-Allow-Origin "*"',
+      'set Access-Control-Allow-Methods "GET, OPTIONS, POST"',
+      'set Access-Control-Allow-Headers "origin, authorization, accept"',
+    ],
   }
 
   class { '::graphite':
