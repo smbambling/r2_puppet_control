@@ -9,7 +9,7 @@
 
 class profile::grafana (
   Boolean $monitoring   = hiera("${name}::monitoring", true),
-  String $site_name     = hiera("${name}::site_name"),
+  String $virtualhost     = hiera("${name}::virtualhost"),
   String $ssl_cert      = hiera("${name}::ssl_cert"),
   String $ssl_key       = hiera("${name}::ssl_key"),
   String $admin_user    = hiera("${name}::admin_user", 'admin'),
@@ -50,16 +50,16 @@ class profile::grafana (
     },
   }
 
-  apache::vhost { "${site_name}-non-ssl" :
+  apache::vhost { "${virtualhost}-non-ssl" :
     port            => '80',
     docroot         => '/var/www/html',
-    servername      => $site_name,
+    servername      => $virtualhost,
     redirect_status => 'permanent',
-    redirect_dest   => "https://${site_name}/",
+    redirect_dest   => "https://${virtualhost}/",
   }
 
-  apache::vhost { "${site_name}-ssl" :
-    servername => $site_name,
+  apache::vhost { "${virtualhost}-ssl" :
+    servername => $virtualhost,
     port       => '443',
     docroot    => '/var/www/html',
     ssl        => true,
