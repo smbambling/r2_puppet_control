@@ -49,7 +49,7 @@ mod 'archive',
 
 mod 'yumrepo',
   :git => 'https://github.com/smbambling/bambling-yumrepo.git',
-  :ref => '8c28cbf'
+  :ref => '59076ba'
 
 mod 'apache',
   :git => 'https://github.com/puppetlabs/puppetlabs-apache.git',
