@@ -9,7 +9,7 @@ class profile::octavisjones_com::main (
   Boolean $monitoring = hiera('base::monitoring', true),
   String $ssl_cert    = '/etc/pki/tls/certs/wildcard.octavisjones.com-server.crt',
   String $ssl_key     = '/etc/pki/tls/private/wildcard.octavisjones.com-server.key',
-  String $docroot     = '/mnt/raid/www',
+  String $docroot     = '/mnt/raid/www/octavisjones',
   String $site_name   = 'octavisjones.com',
 ){
 
