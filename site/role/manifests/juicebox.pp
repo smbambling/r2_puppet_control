@@ -11,12 +11,14 @@ class role::juicebox {
   contain profile::plex_media_server
   contain profile::apache
   contain profile::graphite
+  contain profile::grafana
   contain profile::octavisjones_com::main
 
   Class['profile::base'] ->
   Class['profile::local_firewall'] ->
   Class['profile::apache'] ->
-  Class['profile::grpahite'] ->
+  Class['profile::graphite'] ->
+  Class['profile::grafana'] ->
   Class['profile::octavisjones_com::main'] ->  
   Class['profile::plex_media_server']
 
