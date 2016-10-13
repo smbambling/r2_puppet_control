@@ -38,7 +38,7 @@ class profile::graphite (
     target => '/usr/bin/pip',
   }
 
-  apache::vhost { "$virtualhosti-non-ssl":
+  apache::vhost { "${virtualhost}-non-ssl":
     priority                    => 40,
     servername                  => $virtualhost,
     port                        => '80',
