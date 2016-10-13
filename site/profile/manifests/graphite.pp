@@ -1,4 +1,4 @@
-# == Overview: Installs and manages Graphite 
+# == Overview: Installs and manages Graphite
 #
 # == Requirements:
 #  - graphite module
