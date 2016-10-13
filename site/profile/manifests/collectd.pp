@@ -14,7 +14,7 @@ class profile::collectd (
 
   include yumrepo::collectd_ci
 
-   Install Collectd
+  # Install Collectd
   class { '::collectd':
     purge           => true,
     recurse         => true,
