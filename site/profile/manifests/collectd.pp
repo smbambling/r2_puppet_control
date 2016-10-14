@@ -106,4 +106,8 @@ class profile::collectd (
     ],
   }
 
+  class {'collectd::plugin::sensors':
+    ignoreselected => false,
+  }
+
 }
