@@ -102,3 +102,7 @@ mod 'grafana',
 mod 'collectd',
   :git => 'https://github.com/voxpupuli/puppet-collectd.git',
   :ref => 'f5a44db' # tag: v5.1.0
+
+mod 'collectd-plex',
+  :git => 'https://github.com/rickatnight11/collectd-plex.git',
+  :ref => '9c984f5'
