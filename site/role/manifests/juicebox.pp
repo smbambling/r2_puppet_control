@@ -14,7 +14,6 @@ class role::juicebox {
   contain profile::graphite
   contain profile::grafana
   contain profile::octavisjones_com::main
-  contain profile::collectd-plex
 
   Class['profile::base'] ->
   Class['profile::local_firewall'] ->
@@ -24,6 +23,5 @@ class role::juicebox {
   Class['profile::grafana'] ->
   Class['profile::octavisjones_com::main'] ->  
   Class['profile::plex_media_server'] ->
-  Class['profile::collectd-plex']
 
 }

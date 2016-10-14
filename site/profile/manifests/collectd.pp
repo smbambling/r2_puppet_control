@@ -110,4 +110,6 @@ class profile::collectd (
     ignoreselected => false,
   }
 
+  class {'collectd::plugin::plex': }
+
 }
