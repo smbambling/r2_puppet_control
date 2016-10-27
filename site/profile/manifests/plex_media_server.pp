@@ -9,9 +9,9 @@
 class profile::plex_media_server (
   Boolean $monitoring = hiera('profile::plex_media_server::monitoring', true),
   String $url         =
-    'https://downloads.plex.tv/plex-media-server/1.1.4.2757-24ffd60',
+    'https://downloads.plex.tv/plex-media-server/1.2.3.2914-1ff0f18',
   String $pkg         =
-    'plexmediaserver-1.1.4.2757-24ffd60.x86_64.rpm',
+    'plexmediaserver-1.2.3.2914-1ff0f18.x86_64.rpm',
 
 ){
 
