@@ -14,6 +14,8 @@ class role::r2 {
   contain profile::bambling_org::main
   contain profile::techtaco_org::main
   contain profile::techtaco_org::kb
+  contain profile::techtaco_org::kb
+  contain profile::techtaco_org::pogo
   contain profile::graphite
   contain profile::grafana
 
@@ -24,6 +26,7 @@ class role::r2 {
   Class['profile::bambling_org::main'] ->
   Class['profile::techtaco_org::main'] ->
   Class['profile::techtaco_org::kb'] ->
+  Class['profile::techtaco_org::pogo'] ->
   Class['profile::graphite'] ->
   Class['profile::grafana'] ->
   Class['profile::plex_media_server']
