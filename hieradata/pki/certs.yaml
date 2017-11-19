@@ -93,10 +93,10 @@ sslmgmt::certs:
   wildcard.techtaco.org-server:
     cert: |
             -----BEGIN CERTIFICATE-----
-            MIIGCDCCA/CgAwIBAgIDEwqMMA0GCSqGSIb3DQEBDQUAMHkxEDAOBgNVBAoTB1Jv
+            MIIGCDCCA/CgAwIBAgIDE0yyMA0GCSqGSIb3DQEBDQUAMHkxEDAOBgNVBAoTB1Jv
             b3QgQ0ExHjAcBgNVBAsTFWh0dHA6Ly93d3cuY2FjZXJ0Lm9yZzEiMCAGA1UEAxMZ
             Q0EgQ2VydCBTaWduaW5nIEF1dGhvcml0eTEhMB8GCSqGSIb3DQEJARYSc3VwcG9y
-            dEBjYWNlcnQub3JnMB4XDTE3MDcwNjE2MTc1N1oXDTE4MDEwMjE2MTc1N1owGTEX
+            dEBjYWNlcnQub3JnMB4XDTE3MTExOTE2MTIyNloXDTE4MDUxODE2MTIyNlowGTEX
             MBUGA1UEAxQOKi50ZWNodGFjby5vcmcwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAw
             ggIKAoICAQC6JTFabKNG5CNUk+cxh7FLZWtb+cq6FAiFR+opHswCL/SAun0JWYx6
             hiqrFT7CIUfWwYIqWyURRn0r+0iQcdYPWPlaB8WhvRK28SFB60p7dA4ep4xFTzGL
@@ -114,18 +114,18 @@ sslmgmt::certs:
             BwEBBCcwJTAjBggrBgEFBQcwAYYXaHR0cDovL29jc3AuY2FjZXJ0Lm9yZy8wMQYD
             VR0fBCowKDAmoCSgIoYgaHR0cDovL2NybC5jYWNlcnQub3JnL3Jldm9rZS5jcmww
             NwYDVR0RBDAwLoIOKi50ZWNodGFjby5vcmegHAYIKwYBBQUHCAWgEAwOKi50ZWNo
-            dGFjby5vcmcwDQYJKoZIhvcNAQENBQADggIBAGhST8Xpatf/uMumwj3WE11NHCZJ
-            lVpmkaAXOl9OkrOwjRrOohoe/D2o3RYieJikxXm+UtC6BuHvBykbPAaPMFyINVDm
-            IlKN1wTVH5wyt0Yt3S2jfdQsdSm0CylNRa3KA2g0LJtarfEmu6P1P2pzO4yvsEAX
-            oTwTKeXLQG+MG5JE3ya21anYp/cp8DNpB+9UYNxYfiD42tX7x+pwULtUileTV2pg
-            IPT7vgB/ncY30frG7Oty+irr/j4OMT6vseVhcl4sChJbcqCKUakDvHtjD/V1+27r
-            xHDcal42Fl4033r8fCV8yBEn3a+n4mQdFIM8m4vqFyWygFLmSvK/oCivCOieyLn1
-            /P32flSei35I4oxGL2xQlEurdTuG6x8ty2bjKl8YC9Mnsx0TEY6SWGxghnklwvel
-            R4IDt+yy1iJJ0CmU2IVCwY63k42ZLyz3Bx+Q9Q2B/h+fZp0p8oQ/KYQqyWheNLob
-            WDQv7R26m/fYWZO7cJkhhEIR+D4w/iZtgIZdo8BZ/NB7V+7IoYPPsKJB4u0XTk2X
-            42gWJupotEQ2pp5rZv/+uzMgpuRwGqYXAmmCurtOiOiRHo+t3oaRYolGxpqjruBd
-            fd1/qtqh0pOp6dIYTjZCW9RtxD36VdtjpAQ/lEbb4XfJn/TVy479fB2TSddkzAH9
-            AfW4NvAYG1BwJhxo
+            dGFjby5vcmcwDQYJKoZIhvcNAQENBQADggIBAH5AEXKporBp9twzfvJrjKJqG8JQ
+            NrPS0XbX3NFQ7S8QWEPgxm+w1tr43gh3RhJP52KM8WSu9wh9KC5PEvo0MBDD+YGw
+            drydA9yzbagOU/wl72Pf56tAow6JpB1cfvDhJvr2zQ3UP6bqmd5DJR62s69zg185
+            O2NQmvtpeWnCR8b4TRa6BkU//scgRRWp053D9HfaYoVcrj+kp2T84Kk1wRBS+zsN
+            zotzjYPXqVxjZpzExUBt0jw3fAqPJYlz41GqJT3jNYRf6PpAt6k04Vu72kv2N208
+            OVweqKMTcOWgjhIwi46d2HQ/uZeGCTpp3ZfedUMnOxDQFU0Q6Iyj/BeOewQBW9DL
+            SYLDziEmhJY31tL6Rpp+PlK32Ckz7ejoyT6ODO9eOmq7dv+1wHBMpAEhc7cxa9ku
+            8VdzFx73UM6I8SUVN0RFvEFPK55m7V1xr+CZkVGPweE73C5JhqywwlD/BxW1Yv2+
+            po3YxvqZ+vMtsJco9nx4p2XpPL/QqCK1QABrDtk65yeQdfjsUAsNjfOWAlBhwwIY
+            bRPm4Txp0ghkfDBZU9uUAFDHTVV36jM/SLdR9fjKtJ4m4Uxiwzpp6OM5G+NZyiCS
+            2dziMdz+JYQ1lW7IJVdEG1oBB2kdFi16Z5i6Vtwl5bdyCEApuUIQZQ6ayPUQE/09
+            hheFTmOO7w/LAAeq
             -----END CERTIFICATE-----
     key: |
            -----BEGIN PRIVATE KEY-----
@@ -183,10 +183,10 @@ sslmgmt::certs:
   wildcard.bambling.org-server:
     cert: |
             -----BEGIN CERTIFICATE-----
-            MIIGCDCCA/CgAwIBAgIDEwqLMA0GCSqGSIb3DQEBDQUAMHkxEDAOBgNVBAoTB1Jv
+            MIIGCDCCA/CgAwIBAgIDE0yzMA0GCSqGSIb3DQEBDQUAMHkxEDAOBgNVBAoTB1Jv
             b3QgQ0ExHjAcBgNVBAsTFWh0dHA6Ly93d3cuY2FjZXJ0Lm9yZzEiMCAGA1UEAxMZ
             Q0EgQ2VydCBTaWduaW5nIEF1dGhvcml0eTEhMB8GCSqGSIb3DQEJARYSc3VwcG9y
-            dEBjYWNlcnQub3JnMB4XDTE3MDcwNjE2MTc0OFoXDTE4MDEwMjE2MTc0OFowGTEX
+            dEBjYWNlcnQub3JnMB4XDTE3MTExOTE2MTIzNloXDTE4MDUxODE2MTIzNlowGTEX
             MBUGA1UEAxQOKi5iYW1ibGluZy5vcmcwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAw
             ggIKAoICAQDt/WjUFJl22fqoHaj6I5yAEnnrdU9RWgJCf2d8hFK5wJDsGtneRGTm
             WoWsxXFW59xrv0SH0f20fKjPKYFB0HUuLH1PdZlbNoc51UWNlImeTyKcWmcn73qE
@@ -204,18 +204,18 @@ sslmgmt::certs:
             BwEBBCcwJTAjBggrBgEFBQcwAYYXaHR0cDovL29jc3AuY2FjZXJ0Lm9yZy8wMQYD
             VR0fBCowKDAmoCSgIoYgaHR0cDovL2NybC5jYWNlcnQub3JnL3Jldm9rZS5jcmww
             NwYDVR0RBDAwLoIOKi5iYW1ibGluZy5vcmegHAYIKwYBBQUHCAWgEAwOKi5iYW1i
-            bGluZy5vcmcwDQYJKoZIhvcNAQENBQADggIBAIV/XDenQPJyEau0fo3fAP4DFluD
-            bFHXkSCtwQjQz7fecjeUkvzAI2WZjU2U5kmelkaq659Z2sRfDd3IjloThjuC4c7a
-            ZTSrHjMc0zf4QlpCxSc3QuscdRbyIbwmYtjB6V8G4w/gbjqM0tK/VR/Y1FBJplhP
-            Bjm5khpSbnCE+g4vouk0Lv63SDn0L+qvtdBPwutdlDAVmcRI6RAXGn5a2Wy+ieIJ
-            hNjAwMxR59ofQW8dbTjatJKhHVqaWTUdjtvf0DbCZZPVxULVg6LV7LkIN7vqRCq9
-            V86qYUoGMTdJ3W/uXzqqfiZl/bxxYtUFhd4A3ysAc1BzEKWMcwhiQ1eyUpDET7xJ
-            kW57ffphm26ZVF86m2h0NKC50BpB+fB9EPS0lOcL0GLb1blo7HU3tjSpVlGms5Jz
-            Z2JtvDA/3UPVss9+dIv98bTqXCRwj2Dvu4FJWGJzzDFaeioZmiYPhiGuLk82g2Ru
-            aqBu49sCN5EzYKXOx2DlBJ5FH42Tep2qb7oSEoJxzBSLe7wxRyK9K0CwTK9QR0oz
-            6d+12oIUNhpPrN/TzZ14xsi7Uay1qvYstusufTqydjxb4tU73VtyZlwgLuJG9sBD
-            6CPUgWGa/mPwI/NTvMDr0F/fQN1MpC/je0lHXri4a+xSZmq9XuB/y7JhmxP4k/iB
-            A1cE1S4l1d8rbfs7
+            bGluZy5vcmcwDQYJKoZIhvcNAQENBQADggIBAFCortov/dQlrBQffulmGbQUJzPw
+            fIOalCMUcMFJp2R1LW5SYetxrOtHkO3fusp1yMQwHF2pKodZPXSRrQVan2w2y5Qp
+            GM0QN/aJVD/oI004WovfbFj6mfli+5zZAuWr8UsDSwPngteP04rOefNu+D9u5BQ6
+            1XZM8cqY0F5V1RLfu3OMKeTkgZHq5IAiqFfhRos7BnJJRFFre1+6+BWOWCvhAvTW
+            a+HYEvTFzayjjlBVXWjjkHcfugFajz8Ej5ijLQTeUN/MWwWUuF4C6oHC0RuLAspw
+            51oSqhJLweWPNQhAW5OwzVoe9RqN8QRG+QgC6z6CoTeJBR+W/5NoRQmpM7TtVy4d
+            rVRlfhVhwwjpzKDC1Xjub1skJapiTYngGnyM8r+42veP6L6fcN7AqKd+rrzf77Ks
+            SKMlcfwpKrfozRnCvsJab3rhs/jSOmCBEl2/S+22vcGP44+MfHjLiFVT3CKtxxVm
+            5HfJZ8PJymeWaKoY/YUuTAYThT5aIc6X4wJMhOwvj2sggwiSTq2hGj0Apdb8yhEZ
+            Wg4q+9vYafLNBtNsRQHFOYKYVmcjlFVLFZzcXFy+2iKlVd1VV0sbmCQDmC40GT3i
+            Ty+GHkHw+/bcHaMf3xbcCfOg6+iXdxR5A6B+rZl3/fYzI6Gz51YzYUpqPtesOph4
+            +Qf8/kHOIZmRUycv
             -----END CERTIFICATE-----
     key: |
            -----BEGIN PRIVATE KEY-----
