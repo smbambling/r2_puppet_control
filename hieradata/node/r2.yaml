@@ -36,11 +36,11 @@ profile::grafana::monitoring: false
 profile::grafana::virtualhost: 'grafana.techtaco.org'
 profile::grafana::ssl_cert: '/etc/pki/tls/certs/wildcard.techtaco.org-server.crt'
 profile::grafana::ssl_key: '/etc/pki/tls/private/wildcard.techtaco.org-server.key'
-profile::grafana::version: '4.1.2'
+profile::grafana::version: '5.0.3'
 profile::grafana::rpm_iteration: '1486989747'
 profile::grafana::admin_user: 'smbambling'
 profile::grafana::admin_pass: 'qwerty1234'
 # }}}
 
 # {{{ profile:collectd
-yumrepo::collectd_ci::collectd_ci_url: 'http://pkg.ci.collectd.org/rpm/collectd-5.7/epel-$releasever-$basearch'
+yumrepo::collectd_ci::collectd_ci_url: 'http://pkg.ci.collectd.org/rpm/collectd-5.8/epel-$releasever-$basearch'
