@@ -11,7 +11,7 @@ class profile::plex_media_server (
   String $url         =
     'https://downloads.plex.tv/plex-media-server/1.7.5.4035-313f93718',
   String $pkg         =
-    'plexmediaserver-1.11.0.4666-fc635.x86_64.rpm'
+    'plexmediaserver-1.12.1.4885-1046ba85f.x86_64.rpm'
 ){
 
   ## Profile Specific Monitoring ##
