@@ -46,3 +46,6 @@ profile::grafana::rpm_iteration: '1470047149'
 profile::grafana::admin_user: 'octavis'
 profile::grafana::admin_pass: 'qwerty!23'
 # }}}
+
+# {{{ profile:collectd
+yumrepo::collectd_ci::collectd_ci_url: 'http://pkg.ci.collectd.org/rpm/collectd-5.8/epel-$releasever-$basearch'
