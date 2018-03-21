@@ -89,7 +89,7 @@ mod 'ohmyzsh',
 
 mod 'graphite',
   :git => 'https://github.com/echocat/puppet-graphite.git',
-  :ref => '4ae73cc' # tag: v6.0.4
+  :ref => 'cfe143d' # tag: v7.3.0
 
 mod 'memcached',
   :git => 'https://github.com/saz/puppet-memcached',
