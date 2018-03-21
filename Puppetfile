@@ -96,8 +96,8 @@ mod 'memcached',
   :ref => 'bfa64e0' # branch: master
 
 mod 'grafana',
-  :git => 'https://github.com/bfraser/puppet-grafana.git',
-  :ref => '6d426d5' # tag: v2.5.0
+  :git => 'https://github.com/voxpupuli/puppet-grafana.git',
+  :ref => '5f4a7cf' # v4.2.0
 
 mod 'collectd',
   :git => 'https://github.com/voxpupuli/puppet-collectd.git',
