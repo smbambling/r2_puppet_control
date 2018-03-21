@@ -2,29 +2,21 @@
 # this file needs! to be kept in sync with the /etc/puppetlabs/puppet/hiera.yaml
 # file that is generated from the profile::pe::puppetserver class
 ---
-:backends:
-  - yaml
-
-:logger: console
-
-:hierarchy:
-  - node/%{::fqdn}
-  - domain/%{::domain}/%{::server_role}
-  - role/%{::server_role}
-  - domain/%{::domain}
-  - common
-  - pki/certs
-  - pki/ca_certs
-  - monitoring/common
-  - monitoring/profile
-  - accounts/users
-  - accounts/groups
-  - accounts/bsd_passwords
-
-:yaml:
-  :datadir: /tmp/puppet/environments/masterless/hieradata/
-
-:merge_behavior: deeper
-
-:deep_merge_options:
-  :knockout_prefix: '--'
+version: 5
+hierarchy:
+- name: Yaml backend
+  data_hash: yaml_data
+  paths:
+  - '''node/%{::fqdn}.yaml'''
+  - '''domain/%{::domain}/%{::server_role}.yaml'''
+  - '''role/%{::server_role}.yaml'''
+  - '''domain/%{::domain}.yaml'''
+  - 'common.yaml'
+  - 'pki/certs.yaml'
+  - 'pki/ca_certs.yaml'
+  - 'monitoring/common.yaml'
+  - 'monitoring/profile.yaml'
+  - 'accounts/users.yaml'
+  - 'accounts/groups.yaml'
+  - 'accounts/bsd_passwords.yaml'
+  datadir: /tmp/puppet/environments/masterless/hieradata/
