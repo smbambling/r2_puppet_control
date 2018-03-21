@@ -26,12 +26,12 @@ class profile::graphite (
     ensure => 'latest',
   }
 
-  file { '/opt/graphite':
-    ensure => 'directory',
-    owner  => 'root',
-    group  => 'root',
-    mode   => '0755',
-  }
+  #file { '/opt/graphite':
+  #  ensure => 'directory',
+  #  owner  => 'root',
+  #  group  => 'root',
+  #  mode   => '0755',
+  #}
 
   file { '/usr/bin/pip-python':
     ensure => 'link',
@@ -115,7 +115,7 @@ class profile::graphite (
       '127.0.0.1:3072:b',
       '127.0.0.1:3172:c',
     ],
-    require                     => [ File['/opt/graphite'], File['/usr/bin/pip-python'], ],
+    require                     => [ File['/usr/bin/pip-python'], ],
   }
 
   class { '::memcached': }
