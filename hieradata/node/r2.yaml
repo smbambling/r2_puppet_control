@@ -37,7 +37,7 @@ profile::grafana::virtualhost: 'grafana.techtaco.org'
 profile::grafana::ssl_cert: '/etc/pki/tls/certs/wildcard.techtaco.org-server.crt'
 profile::grafana::ssl_key: '/etc/pki/tls/private/wildcard.techtaco.org-server.key'
 profile::grafana::version: '5.0.3'
-profile::grafana::rpm_iteration: '1486989747'
+profile::grafana::rpm_iteration: '1'
 profile::grafana::admin_user: 'smbambling'
 profile::grafana::admin_pass: 'qwerty1234'
 # }}}
